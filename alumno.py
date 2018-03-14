@@ -33,8 +33,7 @@ class alumno(object):
         return min(self.ListaNotas)
 
     def Promedio (self):
-        if len(self.ListaNotas) == 0
-            return False
+
 
 
     def edad (self):
