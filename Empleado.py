@@ -1,4 +1,12 @@
+#ListaDias = lista de dias que tiene que presentarse a trabajar el empleado
+#ListaAsistencias = lista de dias que el empleado se presenta a trabajar
+#porcDeAsist = porcentaje de asistencias
+#cDiasQueFue = cantidad de dias que el empleado fue a trabajar
+#cDiasQueTieneQueIr = cantidad dedias que el empleado tiene que ir a trabajar
+
 import datetime
+import calendar
+
 
 class empleado (object):
     nombre_empleado = None
@@ -7,10 +15,8 @@ class empleado (object):
     telefono = None
 
     def __init__(self):
-        Dias_que_tiene_que_asistir = []
-
-    def __init__(self):
-        Dias_asistencia = []
+        self.ListaAsistencias = []
+        self.ListaDias = []
 
     def setNombre(self, nombre_empleado):
         self.nombre_empleado = nombre_empleado
@@ -35,6 +41,31 @@ class empleado (object):
 
     def getTelefono(self):
         return self.telefono
+
+    def setlistaDias(self,ListaDias):
+        self.ListaDias = ListaDias
+
+    def AgregarAsistencia(self,fecha):
+        self.ListaAsistencias.append(fecha)
+
+    def porcDeAsist(self, año, mes):
+        cDiasQueFue = 0
+        cDiasQueTieneQueIr = 0
+        cantDiasdelMes = calendar.monthrange(año,mes)[1]
+        for i in range (1,cantDiasdelMes + 1):
+            fecha = datetime.date(año,mes,i)
+            if self.ListaDias[fecha.weekday()]:
+                for item in self.ListaAsistencias:
+                    if fecha == item:
+                        cDiasQueFue += 1
+                        break
+                cDiasQueTieneQueIr += 1
+        return cDiasQueFue / cDiasQueTieneQueIr
+
+
+
+
+
 
 
 
