@@ -61,9 +61,7 @@ class persona(object):
         return (prom_altura/fechas_de_chequeo)
 
     def PorcentajeCrecimiento(self,año1,año2):
-        return (1-(self.PromedioAltura(año1)/self.PromedioAltura(año2)))*100
-
-
+        return ((self.PromedioAltura(año2) * 100) / self.PromedioAltura(año1)) - 100
 
 
 
