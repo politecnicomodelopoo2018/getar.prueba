@@ -1,6 +1,3 @@
-
-
-import datetime
 from Chequeo import chequeo
 
 class persona(object):
