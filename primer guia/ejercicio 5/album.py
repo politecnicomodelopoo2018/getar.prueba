@@ -39,3 +39,19 @@ class Album(object):
                 influencia = item4[1]
                 influyente = item4[0]
         return influyente
+
+    def MetodoAlternativoDeArtistaMasInfluyente(self):
+        influyentes = []
+        influencia = 0
+        influyente = None
+
+        for item in self.ArtistasQueParticipan():
+            influyentes.append([item,1])
+            if item in influyentes:
+                influyentes[1] += 1
+        for item2 in influyentes:
+            if item2[1] > influencia:
+                influencia = item2[1]
+                influyente = item2[0]
+        return influyente
+
