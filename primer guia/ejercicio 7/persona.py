@@ -6,6 +6,9 @@ class Persona(object):
         self.nombre = nombre
         self.apellido = apellido
 
+    def Descuento(self):
+        return 0
+
 class Alumno(Persona):
     division = None
 
@@ -19,3 +22,6 @@ class Profesor(Persona):
     def __init__(self,nombre,apellido,descuento):
         Persona.__init__(nombre,apellido)
         self.descuento = descuento
+
+    def Descuento(self):
+        return self.descuento

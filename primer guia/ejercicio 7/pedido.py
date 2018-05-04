@@ -15,4 +15,3 @@ class Pedido(object):
         self.hora_entrega = hora_entrega
         self.entregado = entregado
 
-    def Descuento(self,):
