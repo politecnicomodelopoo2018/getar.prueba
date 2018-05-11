@@ -3,7 +3,7 @@ from persona import Profesor
 from persona import Alumno
 from plato import Plato
 from pedido import Pedido
-from menu import Menu
+from clase_menu import Menu
 
 M = Menu()
 
@@ -23,7 +23,6 @@ while(True):
             print("1) Agregar Alumno ")
             print("2) Eliminar Alumno ")
             print("3) Modificar Alumno ")
-            print("4) Salir")
             op = input("Opcion: ")
 
             if op == 1:
@@ -44,7 +43,7 @@ while(True):
                 M.ModificarAlumno()
                 print("Alumno modificado")
 
-            if op == 4:
+            else:
                 break
 
     if o == 2:
@@ -54,7 +53,6 @@ while(True):
             print("1) Agregar Profesor")
             print("2) Eliminar Profesor")
             print("3) Modificar Profesor")
-            print("4) Salir")
             op2 = input("Opcion: ")
 
             if op2 == 1:
@@ -75,15 +73,17 @@ while(True):
                 M.ModificarProfesor()
                 print("Pofesor modificado")
 
+            else:
+                break
+
     if o == 3:
         os.system('clear')
         while(True):
-            print("Opciones de Plato: ")
+            print("Opciones de Plato:")
             print("1) Agregar Plato")
             print("2) Eliminar Plato")
             print("3) Modificar Plato")
-            print("4) Salir")
-            op3 = input("Opcion:")
+            op3 = input("Opcion: ")
 
             if op3 == 1:
                 os.system('clear')
@@ -102,6 +102,36 @@ while(True):
                 print("Modificar Profesor")
                 M.ModificarProfesor()
                 print("Pofesor modificado")
+
+            else:
+                break
+
+    if o == 4:
+        os.system('clear')
+        while(True):
+            print("Opciones de Pedido:")
+            print("1) Agregar Pedido")
+            print("2) Eliminar Pedido")
+            print("3) Modificar Pedido")
+            op4 = input("Opcion: ")
+
+            if op4 == 1:
+                os.system('clear')
+                print("Agregar Pedido")
+                M.AgregarPedido()
+                print("Pedido agregado")
+
+            if op4 == 2:
+                os.system('clear')
+                print("Eliminar Pedido")
+                M.EliminarPedido()
+                print("Pedido eliminado")
+
+            if op4 == 3:
+                os.system('clear')
+                print("Modificar Pedido")
+                M.Modificar()
+
 
 
 
