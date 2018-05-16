@@ -12,3 +12,7 @@ class Pedido(object):
         self.hora_entrega = hora_entrega
         self.entregado = entregado
 
+    def getPrecio(self):
+        return self.plato.precio-(self.plato.precio * self.persona.Descuento())
+
+

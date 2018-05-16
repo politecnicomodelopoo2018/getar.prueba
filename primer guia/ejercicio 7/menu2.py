@@ -16,7 +16,7 @@ while(True):
     print("5) Salir")
     o = input("Opcion: ")
 
-    if o == 1:
+    if o == "1":
         os.system('clear')
         while(True):
             print("Opciones de Alumno:")
@@ -25,19 +25,19 @@ while(True):
             print("3) Modificar Alumno ")
             op = input("Opcion: ")
 
-            if op == 1:
+            if op == "1":
                 os.system('clear')
                 print("Agregar Alumno:")
                 M.AgregarAlumno()
-                print("Alumno agregado")
+                os.system('clear')
 
-            if op == 2:
+            if op == "2":
                 os.system('clear')
                 print("ELiminar Alumno:")
                 M.EliminarAlumno()
-                print("Alumno eliminado")
+                os.system('clear')
 
-            if op == 3:
+            if op == "3":
                 os.system('clear')
                 print("Modificar Alumno:")
                 M.ModificarAlumno()
@@ -46,7 +46,7 @@ while(True):
             else:
                 break
 
-    if o == 2:
+    if o == "2":
         os.system('clear')
         while(True):
             print("Opciones de Profesor: ")
@@ -55,19 +55,19 @@ while(True):
             print("3) Modificar Profesor")
             op2 = input("Opcion: ")
 
-            if op2 == 1:
+            if op2 == "1":
                 os.system('clear')
                 print("Agregar Profesor")
                 M.AgregarProfesor()
                 print("Profesor agregado")
 
-            if op2 == 2:
+            if op2 == "2":
                 os.system('clear')
                 print("Eliminar Profesor")
                 M.EliminarProfesor()
                 print("Profesor eliminado")
 
-            if op2 == 3:
+            if op2 == "3":
                 os.system('clear')
                 print("Modificar Profesor")
                 M.ModificarProfesor()
@@ -76,7 +76,7 @@ while(True):
             else:
                 break
 
-    if o == 3:
+    if o == "3":
         os.system('clear')
         while(True):
             print("Opciones de Plato:")
@@ -85,19 +85,19 @@ while(True):
             print("3) Modificar Plato")
             op3 = input("Opcion: ")
 
-            if op3 == 1:
+            if op3 == "1":
                 os.system('clear')
                 print("Agregar Profesor")
                 M.AgregarProfesor()
                 print("Profesor agregado")
 
-            if op3 == 2:
+            if op3 == "2":
                 os.system('clear')
                 print("Eliminar Profesor")
                 M.EliminarProfesor()
                 print("Profesor eliminado")
 
-            if op3 == 3:
+            if op3 == "3":
                 os.system('clear')
                 print("Modificar Profesor")
                 M.ModificarProfesor()
@@ -106,7 +106,7 @@ while(True):
             else:
                 break
 
-    if o == 4:
+    if o == "4":
         os.system('clear')
         while(True):
             print("Opciones de Pedido:")
@@ -115,19 +115,19 @@ while(True):
             print("3) Modificar Pedido")
             op4 = input("Opcion: ")
 
-            if op4 == 1:
+            if op4 == "1":
                 os.system('clear')
                 print("Agregar Pedido")
                 M.AgregarPedido()
                 print("Pedido agregado")
 
-            if op4 == 2:
+            if op4 == "2":
                 os.system('clear')
                 print("Eliminar Pedido")
                 M.EliminarPedido()
                 print("Pedido eliminado")
 
-            if op4 == 3:
+            if op4 == "3":
                 os.system('clear')
                 print("Modificar Pedido")
                 M.Modificar()

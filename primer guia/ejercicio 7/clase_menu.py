@@ -1,6 +1,7 @@
 from persona import Alumno
 from persona import Profesor
 from plato import Plato
+from pedido import Pedido
 
 class Menu(object):
 
@@ -10,16 +11,37 @@ class Menu(object):
         self.lista_platos = []
         self.lista_pedidos = []
 
-    def AgregarAlumno(self,A):
+    def AgregarAlumno(self):
+        nombre = input("ingrese el nombre: ")
+        apellido = input('Ingrese el apellido: ')
+        division = input('Ingrese la division: ')
+
+        A = Alumno(nombre, apellido, division)
+        A.nombre = nombre
+        A.apellido = apellido
+        A.division = division
         self.lista_alumnos.append(A)
 
-    def AgregarProfesor(self,Pr):
+    def AgregarProfesor(self,nombre,apellido,descuento):
+        Pr = Profesor()
+        Pr.nombre = nombre
+        Pr.apellido = apellido
+        Pr.descuento = descuento
         self.lista_profesores.append(Pr)
 
-    def AgregarPlato(self,Pl):
+    def AgregarPlato(self,nombre_plato,precio):
+        Pl = Plato()
+        Pl.nombre_plato = nombre_plato
+        Pl.precio = precio
         self.lista_platos.append(Pl)
 
-    def AgregarPedido(self,Pe):
+    def AgregarPedido(self,fecha_pedido,unaPersona,unPlato,hora_entrega,entregado):
+        Pe = Pedido
+        Pe.fecha_pedido = fecha_pedido
+        Pe.persona = unaPersona
+        Pe.plato = unPlato
+        Pe.hora_entrega = hora_entrega
+        Pe.entregado = entregado
         self.lista_pedidos.append(Pe)
 
     def EliminarAlumno(self, nombre, apellido):
