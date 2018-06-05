@@ -1,5 +1,1 @@
-zdkjfbdgbjkdfhvjfkdvnfd
-
-jkvfdgvfdijvfvkv
-
-class
+class algoquesirve(object)
